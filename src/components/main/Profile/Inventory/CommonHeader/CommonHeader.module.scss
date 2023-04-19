@@ -1,0 +1,10 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    height: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+

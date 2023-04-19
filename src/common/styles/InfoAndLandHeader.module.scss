@@ -1,0 +1,28 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    margin-top: 5px;
+    background: $mainColor;
+    width: 100%;
+    height: $infoHeight;
+    color: $mainTextColor;
+    @include flex($justifyContent: space-around, $alignItems: center);
+
+    div {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        height: $infoHeight + 18px;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 600px - 1200px
+    .component {
+        height: auto;
+        padding: 10px;
+    }
+}

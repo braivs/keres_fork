@@ -1,0 +1,9 @@
+@import '/src/common/styles/variables';
+@import '/src/common/styles/mixins';
+
+.plzSelect {
+    background-color: $mainColor;
+    margin-bottom: 5px;
+    height: 48px;
+    @include flex(center, center);
+}

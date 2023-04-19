@@ -1,0 +1,18 @@
+@import '/src/common/styles/mixins';
+@import '/src/common/styles/variables';
+
+.email {
+    margin-bottom: 10px;
+}
+
+.isDisabled {
+    @include commonDisabledButtonStyles;
+}
+
+.serverAnswer {
+    margin-top: 10px;
+}
+
+.send {
+    color: green;
+}

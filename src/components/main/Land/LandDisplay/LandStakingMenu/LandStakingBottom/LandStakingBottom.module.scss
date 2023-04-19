@@ -1,0 +1,36 @@
+@import '../common/styles/PltUpgMixins';
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: UpgBottom;
+    display: grid;
+    grid-template-columns: 1fr 5.69fr;
+    grid-gap: $gap;
+
+    button {
+        @include btnStyle;
+    }
+
+    .stats {
+        @include flex($justifyContent: space-around, $alignItems: center);
+        flex-wrap: wrap;
+
+        span {
+            margin-right: 5px;
+            @include mainColorOpacity(0.5);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        button {
+            padding: 5px;
+        }
+
+        .stats {
+            padding: 5px;
+        }
+    }
+}

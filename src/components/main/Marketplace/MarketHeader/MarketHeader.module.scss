@@ -1,0 +1,17 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: calc(#{$gap}*2);
+    grid-gap: calc(#{$gap}*2);
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr;
+        grid-gap: $gap;
+    }
+}

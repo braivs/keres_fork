@@ -1,0 +1,130 @@
+@import "src/common/styles/variables";
+@import "src/common/styles/mixins";
+
+.component {
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "isOnline ava nameAndStatusMessage icons";
+    height: 68px;
+    width: 100%;
+    padding: 10px 21.5px 10px 13px;
+    direction: ltr;
+
+    .isOnline {
+        grid-area: isOnline;
+        align-self: flex-start;
+    }
+
+    .ava {
+        grid-area: ava;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .circularProgress {
+        grid-area: ava;
+    }
+
+    .nameAndStatusMessage {
+        grid-area: nameAndStatusMessage;
+        @include flex($flexDirection: column, $justifyContent: space-between);
+        overflow-x: hidden;
+
+        .nameWrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            .name {
+                font-size: 18px;
+                max-width: 200px;
+                padding-bottom: 3px;
+            }
+        }
+
+        .statusWrapper {
+            white-space: nowrap;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            .statusMessage {
+                font-size: 13px;
+                color: $secondTextColor;
+                font-family: Oswald, sans-serif;
+            }
+        }
+    }
+
+    .icons {
+        grid-area: icons;
+        margin-left: auto;
+        @include flex($alignItems: center);
+
+        .gameIcon {
+            margin-right: 31.5px;
+            margin-left: 31.5px;
+        }
+
+        .chatIcon{
+            cursor: pointer ;
+        }
+
+        .chatIcon {
+            width: 20px;
+            height: 19px;
+        }
+
+        .chatIcon {
+            mask: url('/assets/image/tabfriends/chat.svg') no-repeat center;
+        }
+
+        .gameIcon {
+            cursor: auto
+        }
+
+        .isUnreadMessages {
+            width: 30px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+    }
+}
+
+.component:not(:last-child) {
+    margin-bottom: $gap;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+         grid-template-areas:
+            "nameAndStatusMessage nameAndStatusMessage nameAndStatusMessage nameAndStatusMessage"
+            "isOnline ava ava icons";
+        padding: 5px 21.5px 5px 13px;
+        justify-items: center;
+        row-gap: 5px;
+        height: 64px;
+
+        .ava {
+            width: 20px;
+            height: 20px;
+            //margin-left: 5px;
+        }
+
+        .nameAndStatusMessage {
+            flex-direction: row;
+            width: 100%;
+
+            .nameWrapper {
+                max-width: 50%;
+            }
+
+            .statusWrapper {
+                max-width: 50%;
+            }
+        }
+    }
+}

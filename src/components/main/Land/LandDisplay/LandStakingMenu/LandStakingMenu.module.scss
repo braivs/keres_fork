@@ -1,0 +1,24 @@
+@import 'src/common/styles/variables';
+
+.component {
+    display: grid;
+    grid-template-rows: auto 40px;
+    grid-template-columns: 2.15fr 1fr;
+    grid-template-areas:
+        "UpgLeft UpgRight"
+        "UpgBottom UpgBottom";
+    grid-row-gap: 7px;
+    grid-column-gap: $gap;
+    padding: 13px 16px 21px;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "UpgLeft"
+            "UpgRight"
+            "UpgBottom";
+    }
+}

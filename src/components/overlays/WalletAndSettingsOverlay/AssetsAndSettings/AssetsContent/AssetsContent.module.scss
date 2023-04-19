@@ -1,0 +1,32 @@
+@import "../../../../../common/styles/mixins";
+@import "../../../../../common/styles/variables";
+
+.component {
+    font-size: 8px;
+    padding-top: 15px;
+    width: 100%;
+    .tokensAndCredits {
+        .assetElement {
+            @include flex($justifyContent: space-between);
+            border-bottom: 1px solid $secondTextColor;
+            padding-bottom: 2px;
+        }
+        .assetElement:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+    .buttons {
+        margin-top: 15px;
+        @include flex($justifyContent: space-between);
+        button {
+            width: 50px;
+            height: 25px;
+            background-color: $mainColor;
+            border: none;
+            border-radius: 5px;
+            font-size: 8px;
+            cursor: pointer;
+        }
+    }
+
+}

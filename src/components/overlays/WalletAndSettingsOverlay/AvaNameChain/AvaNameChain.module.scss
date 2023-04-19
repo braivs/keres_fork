@@ -1,0 +1,52 @@
+@import '/src/common/styles/variables';
+@import '/src/common/styles/mixins';
+
+.component {
+    @include flex();
+    width: 100%;
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .container {
+        width: 100%;
+        @include flex($justifyContent: center, $alignItems: center, $flexDirection: column);
+        overflow: hidden;
+        padding: 0 10px;
+
+        .nameWrapper {
+            width: 100%;
+            overflow-x: auto;
+
+            .name {
+                text-align: center;
+            }
+        }
+
+        .selectedChain, .address {
+            font-size: 8px;
+            padding-top: $gap;
+            color: $secondTextColor;
+        }
+
+        .status {
+            font-size: 12px;
+            display: flex;
+            max-width: 100%;
+
+            .statusWrapper {
+                white-space: nowrap;
+                overflow-x: auto;
+                padding-bottom: 4px;
+                margin-left: 3px;
+            }
+
+            span {
+                color: $secondTextColor;
+            }
+        }
+    }
+
+}

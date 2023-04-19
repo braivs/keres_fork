@@ -1,0 +1,48 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 20px);
+        grid-gap: $gap;
+        margin-top: 5px;
+
+        div {
+            background-color: $mainColor;
+            font-size: 11px;
+            @include flex($justifyContent: center, $alignItems: center);
+        }
+
+        .volume {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 7;
+
+            span {
+                margin-right: 5px;
+                color: $secondTextColor;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        .container {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 20px);
+
+            .volume {
+                grid-row-start: 4;
+                grid-row-end: 5;
+                grid-column-start: 1;
+                grid-column-end: 6;
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+@import '../../common/MarketStyles.module';
+
+@mixin rows {
+    grid-template-rows: 20px;
+}
+.component {
+    .container1 {
+        @include gridContainer();
+        @include rows();
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .container2 {
+        @include gridContainer();
+        @include rows();
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .container3 {
+        @include gridContainer();
+        @include rows();
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,35 @@
+@import "/src/common/styles/variables";
+
+.component {
+    grid-area: TopStuff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    position: relative;
+
+    .subContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+
+        .subContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 5px;
+        }
+    }
+}

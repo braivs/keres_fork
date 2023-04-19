@@ -1,0 +1,38 @@
+.menuContent {
+    div {
+        margin-left: 50px;
+        a {
+            color: #8C8D8F;
+            text-decoration: none;
+        }
+        .active {
+            color: #FFFFFF;
+        }
+    }
+
+    margin-right: 25px;
+    z-index: 2;
+}
+
+
+@media only screen and (max-width: 1800px) { // 1536px - 1800px
+
+}
+
+@media only screen and (max-width: 1590px) { // 1200px - 1590px. Here 1590 set to fix buttons overflow.
+    .menuContent {
+        div {
+            margin-left: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .menuContent {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+
+}

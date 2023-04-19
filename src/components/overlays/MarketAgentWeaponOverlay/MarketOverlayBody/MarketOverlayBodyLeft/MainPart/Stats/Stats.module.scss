@@ -1,0 +1,20 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 2.38fr 1.75fr 0.79fr;
+    height: 30px;
+    grid-gap: $gap;
+
+    div {
+        @include flex(center, center);
+        font-size: 12px;
+        @include mainColorOpacity(0.5);
+    }
+}
+
+.stats:not(:last-child) {
+    margin-bottom: $gap;
+}
+

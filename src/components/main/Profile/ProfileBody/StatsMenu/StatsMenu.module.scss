@@ -1,0 +1,18 @@
+@import "../../../../../common/styles/variables";
+
+.component {
+    grid-area: Rating;
+    padding: 25px 15px;
+    grid-gap: 5px;
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 100px;
+        grid-template-areas:
+        "Left Right";
+        grid-gap: 5px;
+    }
+}

@@ -1,0 +1,9 @@
+@import "../../../../common/styles/mixins";
+@import "../../../../common/styles/variables";
+
+.component {
+    height: 134px;
+    background-color: $mainColor;
+    margin-top: $gap;
+    padding: 0 17px 10px 17px;
+}

@@ -1,0 +1,30 @@
+@import '/src/common/styles/mixins';
+@import '/src/common/styles/variables';
+
+.searchContainer {
+    margin-bottom: 10px;
+    gap: 2px;
+    @include flex($flexDirection: column);
+
+    input {
+        width: 100%;
+        height: 25px;
+        color: black;
+        padding: 5px;
+    }
+
+    .buttonContainer {
+        gap: 2px;
+        display: flex;
+
+        .button {
+            height: 25px;
+            width: 50%;
+            @include commonButtonStyles;
+        }
+
+        .isDisabled {
+            @include commonDisabledButtonStyles;
+        }
+    }
+}

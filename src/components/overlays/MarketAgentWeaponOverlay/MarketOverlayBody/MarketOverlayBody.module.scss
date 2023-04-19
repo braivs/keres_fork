@@ -1,0 +1,20 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: $gap;
+    height: calc(41px + 5px + 320px);
+    width: 100%;
+    grid-gap: $gap;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
+}
+

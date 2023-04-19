@@ -1,0 +1,20 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.overlayContainer {
+    padding: 12px 10px;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .overlayContainer {
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .overlayContainer {
+        width: calc(100% - 20px);
+        margin: 0;
+    }
+}
+

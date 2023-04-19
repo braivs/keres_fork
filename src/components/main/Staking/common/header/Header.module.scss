@@ -1,0 +1,8 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    @include flex($justifyContent: center, $alignItems: center);
+    font-size: 18px;
+    padding: 15px 0;
+}

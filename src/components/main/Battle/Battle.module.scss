@@ -1,0 +1,25 @@
+@import '/src/common/styles/variables';
+
+.component {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        grid-template-areas:
+            "LeftPart RightPart";
+        grid-column-gap: $gap;
+    }
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "LeftPart"
+            "RightPart";
+            grid-row-gap: $gap;
+        }
+    }
+}

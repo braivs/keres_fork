@@ -1,0 +1,28 @@
+@import "../../../../../../common/styles/variables";
+
+.component {
+    grid-area: Left;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 5px;
+
+    .blockSettings {
+        width: 60px;
+        height: 120px;
+        background-color: $mainColor;
+    }
+}
+
+.logoStyling {
+    font-size: 8px;
+    justify-content: space-between;
+
+    div {
+        margin-bottom: 0;
+    }
+}
+
+.winAndLostStyling {
+    justify-content: center;
+}

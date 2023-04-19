@@ -1,0 +1,10 @@
+@import 'src/common/styles/variables';
+
+.component {
+    grid-area: LeftPart;
+    display: grid;
+    grid-template-rows: 3fr 2fr 3fr;
+    grid-gap: $gap;
+    overflow-y: scroll;
+    padding-right: 5px;
+}

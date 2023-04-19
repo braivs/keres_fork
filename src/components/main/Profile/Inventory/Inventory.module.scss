@@ -1,0 +1,58 @@
+@import '/src/common/styles/variables';
+@import '/src/common/styles/mixins';
+
+.component {
+    margin-top: 5px;
+    grid-gap: $gap;
+    position: relative;
+
+    .inventoryHeader, .inventoryContent {
+        margin-bottom: $gap;
+    }
+
+    .inventoryContent, .headers {
+        display: grid;
+        grid-template-columns: 4.15fr 3.1fr repeat(3, 1fr);
+        grid-gap: $gap;
+    }
+
+    .inventoryContent {
+        margin-bottom: $gap;
+        grid-area: inventoryContentHeaders;
+    }
+
+    .overlayHeaders {
+        display: grid;
+        grid-gap: $gap;
+        grid-template-columns: 4.15fr 3.1fr repeat(3, 1fr);
+    }
+
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.main {
+    padding: 16px 32px;
+}
+
+.overlay {
+    padding-right: $paddingBeforeScroll;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        .inventoryContent {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, auto);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .main {
+        padding: 16px 16px;
+    }
+}
+

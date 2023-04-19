@@ -1,0 +1,25 @@
+@import 'src/common/styles/variables';
+
+.component {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "Keres Hydro"
+        "Calculator Calculator";
+    margin-top: 10px;
+    grid-gap: 10px;
+
+    padding-right: $paddingBeforeScroll;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "Keres"
+        "Hydro"
+        "Calculator";
+    }
+}

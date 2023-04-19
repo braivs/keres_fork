@@ -1,0 +1,50 @@
+@import '/src/common/styles/variables';
+
+.component {
+    margin: 5px 0;
+    color: $mainTextColor;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "ProfileBanner ProfileBanner ProfileBanner ProfileBanner ProfileBanner Leaderboard Achievements"
+        "Rating TopStuff TopStuff TopStuff TopStuff Leaderboard Achievements"
+        "Rating TopStuff TopStuff TopStuff TopStuff Leaderboard Achievements";
+    grid-gap: 5px;
+
+}
+
+@media only screen and (max-width: 1536px) { // 1536px - 1200px
+    .component {
+        grid-template-rows: 0.25fr 1fr 0.5fr;
+        grid-template-areas:
+        "ProfileBanner ProfileBanner ProfileBanner ProfileBanner ProfileBanner ProfileBanner ProfileBanner"
+        "Leaderboard Leaderboard Leaderboard Leaderboard Achievements Achievements Achievements"
+        "Rating TopStuff TopStuff TopStuff TopStuff TopStuff TopStuff";
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        grid-template-rows: 0.25fr 0.5fr 0.5fr 0.5fr 1fr;
+        grid-template-areas:
+        "ProfileBanner ProfileBanner ProfileBanner ProfileBanner ProfileBanner ProfileBanner ProfileBanner"
+        "Leaderboard Leaderboard Leaderboard Leaderboard Leaderboard Leaderboard Leaderboard"
+        "Achievements Achievements Achievements Achievements Achievements Achievements Achievements"
+        "Rating Rating Rating Rating Rating Rating Rating"
+        "TopStuff TopStuff TopStuff TopStuff TopStuff TopStuff TopStuff";
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "ProfileBanner"
+        "Leaderboard"
+        "Achievements"
+        "Rating"
+        "TopStuff";
+    }
+}

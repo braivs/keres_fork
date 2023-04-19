@@ -1,0 +1,23 @@
+@import 'src/common/styles/variables';
+
+.component {
+    display: grid;
+    grid-template-rows: 1.5fr repeat(2, 2fr) 7fr repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: $gap;
+    padding: 19px 16px;
+}
+
+.priceGridArea {
+
+}
+
+.totalGridArea {
+
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-rows: auto repeat(2, 2fr) 2fr repeat(6, 1fr);
+    }
+}

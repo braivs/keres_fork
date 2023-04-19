@@ -1,0 +1,91 @@
+@import '/src/common/styles/variables';
+@import '/src/common/styles/mixins';
+
+.header {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 5px;
+    overflow-x: hidden;
+
+    .logoAndMenu {
+        width: 100%;
+        height: $headerHeight;
+        @include flex($justifyContent: flex-start, $alignItems: center, $flexDirection: row);
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .wextrizigCompass {
+            width: 37.5px;
+            height: 40px;
+            margin-left: 13px;
+        }
+
+        .keresverse {
+            width: 172px;
+            height: 20px;
+            margin-left: 14px;
+        }
+
+        .iconBlock {
+            margin-left: auto;
+            margin-right: 10px;
+
+            .icons {
+                margin-left: 5px;
+                margin-bottom: 5px;
+                width: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .additionalPadding {
+        padding: 10px 30px;
+    }
+
+}
+
+@media only screen and (max-width: 1800px) { // 1536px - 1800px
+
+}
+
+@media only screen and (max-width: 1536px) { // 1200px - 1536px
+    .header {
+        .logoAndMenu {
+            height: $headerHeight + 30px;
+
+            .logo {
+                flex-direction: column;
+            }
+
+            .wextrizigCompass {
+                margin-left: 0;
+                margin-bottom: 3px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .header {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        position: relative;
+
+        .logoAndMenu {
+            .iconBlock {
+                position: absolute;
+                top: 72px;
+                right: 17px;
+            }
+        }
+    }
+}
+

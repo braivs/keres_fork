@@ -1,0 +1,51 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+/*
+.component {
+    @include flex($justifyContent: center, $alignItems: center);
+*/
+
+    .overlayContainer {
+        width: 400px;
+        position: relative;
+        padding: 39px 36px 28px;
+        font-family: Oswald, sans-serif;
+
+        h1 {
+            font-size: 22px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .helpBlock {
+            @include flex($alignItems: flex-start);
+            margin-bottom: 10px;
+            div {
+                font-family: Oswald, sans-serif;
+            }
+            img {
+                margin-right: 5px;
+            }
+            .burger {
+                width: 20px;
+            }
+
+            .additionalButtonSettings {
+                width: 50px;
+                height: $addImgSendHeightBtn;
+                margin-right: 5px;
+                cursor: auto;
+            }
+
+        }
+    }
+//}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        .overlayContainer {
+            width: 320px;
+        }
+    }
+}

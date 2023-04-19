@@ -1,0 +1,38 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+
+    .header, .body {
+        width: 100%;
+        font-size: 12px;
+        @include mainColorOpacity(0.5);
+    }
+
+    .header {
+        height: 30px;
+        @include flex($justifyContent: center, $alignItems: center);
+    }
+
+    .body {
+        height: 60px;
+        margin-top: $gap;
+    }
+
+    .body:not(:last-child) {
+    }
+}
+
+.component:not(:last-child) {
+    margin-bottom: $gap;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .header {
+        text-align: center;
+    }
+
+    .header, .body {
+        padding: 0 10px;
+    }
+}

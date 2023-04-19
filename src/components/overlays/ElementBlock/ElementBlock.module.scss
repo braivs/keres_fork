@@ -1,0 +1,35 @@
+.component {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(black, 0.35);
+    padding: 20px;
+
+    .text {
+
+    }
+
+    .text600px {
+        font-size: 14px;
+    }
+
+    .lock {
+        margin-top: 10px;
+        width: 50px;
+    }
+
+    .lock600px {
+        margin-top: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.is600px {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}

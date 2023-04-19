@@ -1,0 +1,17 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    width: 100%;
+    height: 41px;
+    @include flex($justifyContent: center, $alignItems: center);
+    margin-bottom: $gap;
+    position: relative;
+
+    .imgClose {
+        position: absolute;
+        right: 15px;
+        cursor: pointer;
+    }
+}
+

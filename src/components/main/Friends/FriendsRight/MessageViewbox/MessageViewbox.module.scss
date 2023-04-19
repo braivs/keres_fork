@@ -1,0 +1,21 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: Messages;
+    display: grid;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 5px;
+    padding-right: $marginFriendsLeftRight;
+
+    .container {
+        padding: 19px 21px;
+        @include flex($flexDirection: column);
+
+        .progressContainer {
+            @include flex($justifyContent: center, $alignItems: center);
+            height: 100%;
+        }
+    }
+}

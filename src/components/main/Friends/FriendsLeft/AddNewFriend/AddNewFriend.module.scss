@@ -1,0 +1,14 @@
+@import 'src/common/styles/variables';
+
+.component {
+    grid-area: AddNewFriend;
+    margin-left: 15px;
+    margin-top: 5px;
+    .additionalButtonSettings {
+        margin-left: auto;
+        margin-right: 25px;
+        width: 50px;
+        margin-top: 9px;
+        height: $addImgSendHeightBtn;
+    }
+}

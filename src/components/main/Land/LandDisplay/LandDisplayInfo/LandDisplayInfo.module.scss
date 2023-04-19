@@ -1,0 +1,25 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    .plotHeader {
+        height: 55px;
+        @include flex($justifyContent: center, $alignItems: center);
+        font-size: 22px;
+    }
+
+    .container {
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
+    }
+}

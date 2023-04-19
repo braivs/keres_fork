@@ -1,0 +1,23 @@
+@import "../../../../../common/styles/mixins";
+@import "../../../../../common/styles/variables";
+
+.component {
+    font-size: 10px;
+    @include flex($justifyContent: center);
+    .menuComponent {
+        width: 100%;
+        height: 25px;
+        cursor: pointer;
+        @include flex($justifyContent: center, $alignItems: center);
+    }
+
+    .active {
+        color: $mainTextColor;
+        border-bottom: 1px solid $mainTextColor;
+    }
+    .passive {
+        color: $secondTextColor;
+        border-bottom: 1px solid $secondTextColor;
+    }
+
+}

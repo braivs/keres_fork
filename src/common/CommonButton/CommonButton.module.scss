@@ -1,0 +1,16 @@
+@import 'src/common/styles/mixins';
+@import "src/common/styles/variables";
+
+.commonButton {
+    .addButton {
+        @include flex($justifyContent: center, $alignItems: center);
+        cursor: pointer;
+        border: none;
+    }
+
+    .isDisabled {
+        cursor: auto;
+        color: lightgrey;
+        background-color: #dedcdc;
+    }
+}

@@ -1,0 +1,29 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    position: relative;
+    @include flex($justifyContent: center, $alignItems: center);
+
+    .plotImg {
+        width: 100%;
+        max-width: 325px;
+    }
+
+    .leftTopImg {
+        position: absolute;
+        left: 25px;
+        top: 23px;
+        transform: scale(2);
+    }
+}
+
+@media only screen and (max-width: 1536px) { // 1200px - 1536px
+    .component {
+        .leftTopImg {
+            left: 10px;
+            top: 8px;
+            transform: scale(1.5)
+        }
+    }
+}

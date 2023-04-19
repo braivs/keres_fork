@@ -1,0 +1,22 @@
+@import '../../../common/styles/variables';
+
+.component {
+    padding-top: $gap;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+        "LeftPart RightPart";
+        grid-column-gap: $gap + 5px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+}

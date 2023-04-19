@@ -1,0 +1,61 @@
+@import "./variables";
+
+@mixin GridAchievementsAndLeaderboard() {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto;
+    grid-gap: 5px;
+}
+
+@mixin flex($justifyContent: stretch, $alignItems: stretch, $flexDirection: row) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+}
+
+@mixin sidekicksGearLandSettings {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-content: stretch;
+
+    div {
+        min-width: 100px;
+        height: 75px;
+    }
+}
+
+@mixin mainColorOpacity($opacity: 1) {
+    color: rgba(255, 255, 255, $opacity);
+}
+
+@mixin mainBackgroundColorOpacity($opacity: 1) {
+    background-color: rgba(255, 255, 255, $opacity);
+}
+
+@mixin commonButtonStyles {
+    background-color: $mainColor;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin commonDisabledButtonStyles {
+    cursor: auto;
+    color: lightgrey;
+    background-color: #dedcdc;
+}
+
+@mixin chatSize {
+    min-width: 300px;
+    min-height: 200px;
+
+    @media only screen and (max-width: 600px) { // 350px - 600px
+        min-width: unset;
+        min-height: unset;
+
+        width: 200px;
+        height: 140px;
+    }
+}

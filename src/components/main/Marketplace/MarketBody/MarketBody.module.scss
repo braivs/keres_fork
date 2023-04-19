@@ -1,0 +1,26 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 10px;
+    grid-gap: 10px;
+
+    padding-right: $paddingBeforeScroll;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}

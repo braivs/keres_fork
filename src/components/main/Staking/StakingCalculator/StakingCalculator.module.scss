@@ -1,0 +1,81 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: Calculator;
+    padding: 12px 16px;
+    position: relative;
+
+    .container {
+        margin-top: $gap;
+        display: grid;
+        grid-template-columns: 1.95fr 1.95fr 1fr;
+        grid-template-rows: 55px 55px;
+        grid-gap: $gap;
+        grid-template-areas:
+            "time inputAmount button"
+            "currency compound button";
+
+        .time {
+            grid-area: time;
+        }
+
+        .inputAmount {
+            grid-area: inputAmount;
+            @include flex(center, center);
+            border: none;
+            outline: none;
+            text-align: center;
+            font-size: 18px;
+
+            &::placeholder {
+                @include mainColorOpacity(0.5);
+            }
+        }
+
+        .currency {
+            grid-area: currency;
+        }
+
+        .compound {
+            grid-area: compound;
+        }
+
+        .button {
+            grid-area: button;
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        .container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 55px 55px 55px;
+            grid-template-areas:
+                "time inputAmount"
+                "currency compound"
+                "button button";
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        .container {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(5, 40px);
+            grid-template-areas:
+                "time"
+                "inputAmount"
+                "currency"
+                "compound"
+                "button";
+
+            .inputAmount {
+                width: 100%;
+            }
+        }
+    }
+}

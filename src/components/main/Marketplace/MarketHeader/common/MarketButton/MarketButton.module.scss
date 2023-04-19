@@ -1,0 +1,23 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    font-size: 11px;
+    border: none;
+    cursor: pointer;
+}
+
+.isOff {
+    @include mainBackgroundColorOpacity(0.25);
+}
+
+.isOn {
+    @include mainBackgroundColorOpacity(0.5);
+
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,67 @@
+@import 'src/common/styles/mixins';
+@import 'src/common/styles/variables';
+
+@mixin avaSize {
+    width: 70px;
+    height: 70px;
+}
+
+.innerContainer {
+    @include flex($flexDirection: column);
+
+    .button {
+        width: 80%;
+        height: 40px;
+        margin: 10px auto 0;
+    }
+
+    .uploadContainer {
+        .cropImgPrev {
+            margin-top: 5px;
+        }
+    }
+
+    .imgContainer {
+        margin: 0 auto;
+        position: relative;
+        height: auto + 20px;
+
+        .dummyImg {
+            margin-top: 5px;
+            border: 1px solid white;
+            @include flex($justifyContent: center, $alignItems: center);
+        }
+
+        .dummyImgAva {
+            @include avaSize();
+        }
+
+        .dummyImgChat {
+            @include chatSize();
+        }
+    }
+
+    .imgContainerAva {
+        @include avaSize();
+    }
+
+    .imgContainerChat {
+        @include chatSize();
+    }
+
+    .croppedImg {
+        margin: 10px auto 0;
+    }
+
+    .croppedImgAva {
+        @include avaSize();
+    }
+
+    .croppedImgChat {
+        @include chatSize();
+    }
+
+    .lastButton {
+        margin-bottom: 5px;
+    }
+}

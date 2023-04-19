@@ -1,0 +1,13 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    padding: 12px 10px;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        @include flex($justifyContent: center);
+        column-gap: 5px;
+    }
+}

@@ -1,0 +1,10 @@
+@import "../../../../../../common/styles/variables";
+
+.component {
+    grid-area: Right;
+    display: grid;
+    grid-template-rows: repeat(10, 30px);
+    grid-template-columns: 100px;
+    grid-gap: 5px;
+    align-content: center;
+}

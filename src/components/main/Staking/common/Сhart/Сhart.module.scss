@@ -1,0 +1,38 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    position: relative;
+    padding-top: 17.5px;
+
+    .chartImg {
+        width: 100%;
+    }
+
+    .conversionWay {
+        position: absolute;
+        top: 9px;
+        left: 17px;
+        width: 120px;
+        height: 25px;
+        background-color: $chartColor;
+        font-size: 10px;
+        @include flex($justifyContent: center, $alignItems: center)
+    }
+
+    .logoImg {
+        position: absolute;
+        bottom: 19.5px;
+        right: 15px;
+    }
+
+    .logoImgKeres {
+        width: 42.69px;
+        height: 40px;
+    }
+
+    .logoImgHydro {
+        height: 49px;
+        width: 37px;
+    }
+}

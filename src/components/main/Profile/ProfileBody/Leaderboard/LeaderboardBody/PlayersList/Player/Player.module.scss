@@ -1,0 +1,23 @@
+@import "../../../../../../../../common/styles/variables";
+
+.player {
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-gap: 5px;
+    margin-bottom: 5px;
+
+    div {
+        background-color: $mainColor;
+        height: 20px;
+        text-align: center;
+        color: $secondTextColor;
+    }
+
+    .playerNumber {
+
+    }
+}
+
+.player:nth-child {
+    margin-bottom: 0;
+}

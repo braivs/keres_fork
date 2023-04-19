@@ -1,0 +1,28 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+@import '../../common/MarketStyles.module';
+
+.component {
+    .container {
+        @include gridContainer();
+        grid-template-rows: 20px 20px;
+        grid-template-columns: repeat(3, 1fr) 2.29fr;
+    }
+
+    input {
+        height: 20px;
+        background-color: $mainColor;
+        border: none;
+        margin-top: $gap;
+        padding-left: $gap;
+        width: 100%;
+
+        &::placeholder {
+            color: $secondTextColor;
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

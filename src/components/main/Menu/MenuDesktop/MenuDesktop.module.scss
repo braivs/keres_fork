@@ -1,0 +1,27 @@
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    margin-left: 80px;
+}
+
+@media only screen and (max-width: 1800px) { // 1536px - 1800px
+
+}
+
+@media only screen and (max-width: 1536px) { // 1200px - 1536px
+    .menu {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+
+}

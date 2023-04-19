@@ -1,0 +1,23 @@
+@import "../../../../../../../common/styles/variables";
+
+.component {
+    width: 100px;
+    height: 30px;
+    background-color: $mainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        font-size: 10px;
+    }
+
+    .firstText {
+        color: $secondTextColor;
+    }
+
+    .secondText {
+
+    }
+}

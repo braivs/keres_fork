@@ -1,0 +1,37 @@
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: MessagesList;
+    padding: 10px 16px;
+
+    .messageText {
+        font-family: Oswald, sans-serif;
+        font-size: 18px;
+    }
+
+    .createdAt {
+        color: lightblue;
+        font-size: 10px;
+    }
+
+    .progressContainer {
+        @include chatSize();
+        @include flex($justifyContent: center, $alignItems: center);
+    }
+
+    .img {
+        @include chatSize();
+    }
+}
+
+.component:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.inMessage {
+    margin-right: auto;
+}
+
+.outMessage {
+    margin-left: auto;
+}

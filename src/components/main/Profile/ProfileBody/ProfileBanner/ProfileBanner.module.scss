@@ -1,0 +1,90 @@
+@import "/src/common/styles/variables";
+@import "/src/common/styles/mixins";
+
+$leftMargin: 31px;
+$bottomPadding: 5px;
+$avaSize: 70px;
+
+.component {
+    grid-area: ProfileBanner;
+    padding: 15px 48px 15px 26px;
+    display: flex;
+    @include flex($alignItems: center);
+    overflow: auto;
+    position: relative;
+
+    .circularWrapper {
+        width: $avaSize;
+        height: $avaSize;
+        min-width: $avaSize; /*to remove collapsing by left block*/
+        @include flex($justifyContent: center, $alignItems: center);
+    }
+
+    .ava {
+        width: $avaSize;
+        height: $avaSize;
+    }
+
+    .NameAndProfession, .noLogin {
+        font-size: 45px;
+    }
+
+    .NameAndProfession {
+        @include flex($justifyContent: space-between, $alignItems: stretch, $flexDirection: row);
+        width: 100%;
+        overflow: auto;
+
+        .loader {
+            margin-bottom: $bottomPadding;
+        }
+
+        .status {
+            margin-left: $leftMargin;
+        }
+
+        .nameWrapper {
+            overflow: auto;
+            max-width: 30%;
+            margin-left: $leftMargin;
+
+            .name {
+                padding-bottom: $bottomPadding;
+            }
+        }
+
+        .loadingContainer {
+            margin-left: $leftMargin;
+        }
+    }
+}
+
+@media only screen and (max-width: 1536px) { // 1200px - 1536px
+    .component {
+        .NameAndProfession, .noLogin {
+            font-size: 36px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        .NameAndProfession {
+            @include flex($justifyContent: space-between, $alignItems: stretch, $flexDirection: column);
+
+            .nameWrapper {
+                max-width: unset;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        padding: 10px 15px 10px 15px;
+
+        .NameAndProfession, .noLogin {
+            font-size: 18px;
+        }
+    }
+}
+

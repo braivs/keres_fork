@@ -1,0 +1,13 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: BattleArea;
+    @include flex($justifyContent: center, $alignItems: center);
+}
+
+.additionalButtonStyles {
+    width: 170px;
+    height: 65px;
+    background-color: rgba(22, 22, 24, 0.5);
+}

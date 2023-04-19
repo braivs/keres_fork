@@ -1,0 +1,33 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    padding: 20px 0;
+    @include flex($justifyContent: space-around);
+    div {
+        font-size: 15px;
+        @include flex($flexDirection: column, $alignItems: center);
+    }
+
+    div:nth-of-type(1) {
+        color: #B0B1B3;
+    }
+
+    div:nth-of-type(2) {
+        color: #ffffff;
+    }
+
+    .element {
+
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        padding: 10px 0;
+        @include flex($flexDirection: column);
+        .element:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}

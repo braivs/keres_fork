@@ -1,0 +1,68 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: UpgRight;
+    display: grid;
+    grid-template-rows: 32px auto;
+    grid-gap: $gap;
+
+    .header {
+        @include flex($justifyContent: center, $alignItems: center);
+    }
+
+    .content {
+        padding: 0 12px;
+        display: grid;
+        grid-template-rows: auto auto;
+
+        .mainText {
+            font-size: 10px;
+        }
+
+        .subText {
+            margin-top: 5px;
+            font-size: 8px;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 5px;
+            line-height: 9px;
+        }
+
+        .noMargin {
+            margin-bottom: 0;
+        }
+
+        .pyramid1, .pyramid2 {
+            //padding-top: 10px;
+            @include flex($justifyContent: space-between, $alignItems: center);
+            img {
+                width: 100%;
+            }
+
+            .left {
+                margin-right: 5px;
+            }
+        }
+
+        .pyramid1 {
+            padding-bottom: 11px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            img {
+                max-width: 78px;
+            }
+        }
+
+        .pyramid2 {
+            padding-top: 10px;
+
+            img {
+                max-width: 115px;
+            }
+        }
+
+
+
+
+    }
+}

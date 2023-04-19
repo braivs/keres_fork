@@ -1,0 +1,15 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.header {
+    @include flex($justifyContent: center);
+    height: 20px;
+    background-color: $mainColor;
+    width: 100%;
+}
+
+@mixin gridContainer {
+    display: grid;
+    grid-gap: $gap;
+    margin-top: 5px;
+}

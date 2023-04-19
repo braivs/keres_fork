@@ -1,0 +1,15 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.additional {
+    flex-wrap: wrap;
+    .element {
+        @include flex();
+
+        div:nth-child(1) {
+            color: $mainColor;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+}

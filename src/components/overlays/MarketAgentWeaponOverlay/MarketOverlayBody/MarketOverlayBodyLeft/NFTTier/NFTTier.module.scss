@@ -1,0 +1,14 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    @include flex(center, center);
+    position: relative;
+
+    .nftTiersImg {
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+    }
+}
+

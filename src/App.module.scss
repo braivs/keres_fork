@@ -1,0 +1,50 @@
+.app {
+    height: 100vh;
+
+    .content {
+        padding: 15px 40px 25px;
+        position: relative;
+        height: 100vh;
+    }
+
+    .content::before {
+        content: "";
+        position: fixed;
+        top: -5%;
+        left: -5%;
+        right: -5%;
+        z-index: -1;
+
+        display: block;
+        background-image: url('./assets/image/background.png');
+        background-size:cover;
+        width: 110%;
+        height: 110%;
+
+        -webkit-filter: blur(8px);
+        -ms-filter: blur(8px);
+        filter: blur(8px);
+    }
+
+}
+
+@media only screen and (max-width: 1800px) { // 1536px - 1800px
+
+}
+
+@media only screen and (max-width: 1536px) { // 1200px - 1536px
+
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .app {
+        .content {
+            padding: 15px 15px 25px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+
+}

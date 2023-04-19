@@ -1,0 +1,10 @@
+@import 'src/common/styles/variables';
+
+.component {
+    grid-area: Main;
+    display: grid;
+    grid-template-columns: 6fr 7fr;
+    grid-template-areas:
+        "LeftPart RightPart";
+    grid-gap: $gap;
+}

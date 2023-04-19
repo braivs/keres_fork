@@ -1,0 +1,41 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: LastMatch;
+    padding: 13px 15px 52px;
+    @include flex($flexDirection: column, $alignItems: center);
+    .headerContainer {
+        width: 100%;
+        @include flex($justifyContent: space-between);
+        h1 {
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .viewAll {
+            @include flex($alignItems: flex-end, $flexDirection: column);
+            cursor: pointer;
+            font-size: 9px;
+            div {
+                color: $secondTextColor;
+            }
+        }
+    }
+    .delimiter {
+        margin: 20px 0;
+        width: 225px;
+        border-top: 1px solid $secondTextColor;
+    }
+
+    .playerList {
+
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        .playerList {
+            width: 100%;
+        }
+    }
+}

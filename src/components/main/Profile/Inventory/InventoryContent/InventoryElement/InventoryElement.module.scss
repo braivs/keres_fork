@@ -1,0 +1,44 @@
+@import '../../../../../../common/styles/variables';
+@import '../../../../../../common/styles/mixins';
+
+.weapons, .agents, .sidekicksGearLand {
+    display: grid;
+    grid-gap: $gap;
+
+    div {
+        @include flex(center, center);
+    }
+}
+
+.weapons, .sidekicksGearLand {
+    grid-template-rows: 75px 75px;
+}
+
+.weapons {
+    grid-template-columns: repeat(4, 1fr);
+
+    div:nth-child(-n + 3) { /* this collapsing 2 last grid columns */
+        grid-column: 2 span;
+    }
+
+    img {
+        max-height: 40px;
+    }
+}
+
+.agents {
+    grid-template-rows: 155px;
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+        max-height: 130px;
+    }
+}
+
+.sidekicksGearLand {
+    grid-template-columns: 1fr 1fr;
+
+    img {
+        max-height: 52px;
+    }
+}

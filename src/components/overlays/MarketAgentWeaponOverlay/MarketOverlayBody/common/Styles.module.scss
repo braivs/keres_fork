@@ -1,0 +1,8 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.leftAndRight {
+    display: grid;
+    grid-template-rows: 41px 1fr;
+    grid-gap: $gap;
+}

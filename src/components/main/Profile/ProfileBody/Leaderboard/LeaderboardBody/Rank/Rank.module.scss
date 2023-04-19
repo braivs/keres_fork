@@ -1,0 +1,19 @@
+@import "../../../../../../../common/styles/variables";
+
+.component {
+    box-sizing: border-box;
+    padding: 5px 0 10px;
+    background-color: $mainColor;
+    text-align: center;
+    display: grid;
+    align-items: stretch;
+    height: 75px;
+
+    div:nth-of-type(1) {
+        color: $secondTextColor;
+    }
+
+    div:nth-of-type(2) {
+        font-size: 24px;
+    }
+}

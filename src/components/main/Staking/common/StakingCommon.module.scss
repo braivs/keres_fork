@@ -1,0 +1,12 @@
+@import 'src/common/styles/variables';
+
+@mixin inputDivAndButton {
+    display: grid;
+    grid-template-columns: 3.96fr 1fr;
+    grid-gap: $gap;
+
+    @media only screen and (max-width: 600px) { // 350px - 600px
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+}

@@ -1,0 +1,10 @@
+@import "../../../../../common/styles/mixins";
+
+.component {
+    @include GridAchievementsAndLeaderboard();
+    grid-area: Leaderboard;
+    grid-template-areas:
+        "LeaderboardHeader"
+        "LeaderboardBody";
+    position: relative;
+}

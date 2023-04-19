@@ -1,0 +1,20 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+@import '../StakingCommon.module';
+
+$placeholderColor: #B0B2B3;
+
+.component {
+    @include inputDivAndButton();
+
+    div {
+        background-color: $chartColor;
+        @include flex($justifyContent: center, $alignItems: center);
+
+        span {
+            margin-left: 5px;
+            color: $placeholderColor;
+        }
+    }
+
+}

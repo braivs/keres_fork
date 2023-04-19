@@ -1,0 +1,31 @@
+@import '/src/common/styles/mixins';
+@import '/src/common/styles/variables';
+
+.container {
+    background-color: $mainColor;
+    padding: 30px;
+    cursor: auto;
+    min-width: 350px;
+    height: 80%;
+    @include flex($flexDirection: column);
+    width: 40%;
+    position: relative;
+}
+
+.error {
+    color: red;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .container {
+        width: 50%
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .container {
+        min-width: unset;
+        width: 100%;
+        margin: 20px;
+    }
+}

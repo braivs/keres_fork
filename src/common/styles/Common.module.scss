@@ -1,0 +1,85 @@
+@import './variables';
+@import './mixins';
+
+.baseBgColor {
+    background-color: $mainColor;
+}
+
+.chartBgColor {
+    background-color: $chartColor;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.headerButton {
+    width: 80%;
+    margin: 0 auto;
+    height: 20px;
+}
+
+.lastHeaderButton {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.avaMessage {
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 1536px) { // 1200px - 1536px
+    .headerButton {
+        height: 30px;
+        width: 100%;
+    }
+
+    .lastHeaderButton {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .lastHeaderButton {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.hiddenImg {
+    display: none;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.cursorAuto {
+    cursor: auto;
+}
+
+.act {
+    background-color: white;
+    cursor: pointer;
+}
+
+.dis {
+    background-color: grey;
+}
+
+.arrowUpIcon, .arrowRightIcon {
+    width: 20px;
+    height: 19px;
+}
+
+.arrowUpIcon {
+    mask: url('/assets/image/tabfriends/arrowUp.svg') no-repeat center;
+}
+
+.arrowRightIcon {
+    mask: url('/assets/image/tabfriends/arrowRight.svg') no-repeat center;
+}

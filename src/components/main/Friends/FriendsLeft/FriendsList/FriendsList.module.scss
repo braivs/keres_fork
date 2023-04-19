@@ -1,0 +1,17 @@
+@import 'src/common/styles/mixins';
+@import "src/common/styles/variables";
+
+.component {
+    grid-area: FriendsList;
+    margin-top: 5px;
+    direction: rtl;
+    overflow-y: scroll;
+
+    padding-left: $marginFriendsLeftRight;
+
+    .container {
+        padding: 6px 10px 24px 12px;
+        min-height: 100%;
+        @include flex($flexDirection: column);
+    }
+}

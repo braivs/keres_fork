@@ -1,0 +1,57 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    padding: 22px 34px;
+    font-size: 11px;
+    min-height: 340px;
+    @include flex($alignItems: center);
+
+    .container {
+        .header {
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+
+        .element {
+            margin-bottom: 1px;
+        }
+
+        .tokenAndClass {
+            @include flex();
+
+            .element:nth-of-type(2) {
+                margin-left: 10px;
+            }
+
+            .dataPlace {
+                width: 145px;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0.1);
+                @include flex($justifyContent: center, $alignItems: center);
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        @include flex($alignItems: center, $justifyContent: center);
+
+        .container {
+            width: 100%;
+
+            .tokenAndClass {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                .dataPlace {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+$winColor: rgba(208, 87, 87, 0.75);
+$looseColor: rgba(132, 206, 140, 0.75);
+
+.component {
+    padding: 7px 13px;
+    width: 270px;
+    height: 53px;
+    @include flex($justifyContent: space-between, $alignItems: center);
+    position: relative;
+
+    .leftPart .mapContainer, .rightPart .KDA {
+        font-size: 10px;
+    }
+
+    .leftPart {
+        @include flex($alignItems: center);
+
+        .ava {
+            margin-right: 12px;
+        }
+
+        .mapContainer {
+            .score {
+                .left {
+                    color: $winColor;
+                }
+
+                .right {
+                    color: $looseColor;
+                }
+            }
+        }
+    }
+
+    .rightPart {
+        @include flex($alignItems: center);
+
+        .KDA {
+            margin-right: 10px;
+        }
+    }
+
+    .border {
+        height: 100%;
+        width: 3px;
+        position: absolute;
+        right: 5px;
+    }
+
+    .borderLoose {
+        background-color: $looseColor;
+    }
+
+    .borderWin {
+        background-color: $winColor;
+    }
+
+}
+
+.winBackground {
+    background-color: $mainColor;
+}
+
+.loseBackground {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.component:not(:last-child) {
+    margin-bottom: $gap;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        width: 100%;
+    }
+}

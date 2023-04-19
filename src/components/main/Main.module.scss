@@ -1,0 +1,23 @@
+.main {
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 1800px) { // 1536px - 1800px
+
+}
+
+@media only screen and (max-width: 1536px) { // 1200px - 1536px
+
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .main {
+        overflow-x: hidden;
+    }
+}

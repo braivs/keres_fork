@@ -1,0 +1,26 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: RightPart;
+    display: grid;
+    grid-template-rows: 60px auto 82px;
+    grid-template-areas:
+        "SelectedFriend"
+        "Messages"
+        "NewMessage";
+    height: calc(100vh - #{$headerHeight + $gap} - #{$infoHeight + $gap} - 50px) ; //(50 is padding of App top & bot)
+    position: relative;
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        grid-area: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-rows: 60px auto 120px;
+    }
+}

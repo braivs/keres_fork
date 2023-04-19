@@ -1,0 +1,14 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    font-size: 18px;
+    @include flex($justifyContent: center, $alignItems: center);
+    height: 55px;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        height: 40px;
+    }
+}

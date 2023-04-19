@@ -1,0 +1,11 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    @include flex($justifyContent: center, $alignItems: center);
+    width: 100%;
+
+    .container {
+        cursor: auto;
+    }
+}

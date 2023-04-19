@@ -1,0 +1,29 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    padding: 12px 9px 28px;
+
+    .imgContainer {
+        height: 210px;
+        @include flex(center, center);
+        margin-bottom: $gap;
+    }
+
+    .mainImg {
+        max-height: 185px;
+    }
+
+    .secondImg {
+        margin-left: 27.6px;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        .mainImg {
+            max-width: 100%;
+            padding: 10px;
+        }
+    }
+}

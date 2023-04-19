@@ -1,0 +1,42 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    width: 350px;
+    height: 325px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $mainColor;
+    padding: 11px 20px;
+
+    .avaContainer {
+        height: 70px;
+
+        .buttonContainer {
+            @include flex($justifyContent: center, $alignItems: stretch);
+
+            .button {
+                margin-top: $gap;
+                padding: 5px;
+                height: 40px;
+                margin-right: 5px;
+            }
+
+            .lastButton {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        margin-left: 0;
+        margin-right: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: calc(100% - 40px); /* Need a specific value to work */
+    }
+}
+

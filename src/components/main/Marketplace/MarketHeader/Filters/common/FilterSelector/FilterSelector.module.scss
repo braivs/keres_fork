@@ -1,0 +1,24 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $gap;
+
+    div {
+        font-size: 11px;
+        border: none;
+        cursor: pointer;
+        @include flex($justifyContent: center, $alignItems: center);
+    }
+
+    .selected {
+        @include mainBackgroundColorOpacity(0.5);
+    }
+
+    .notSelected {
+        @include mainBackgroundColorOpacity(0.25);
+    }
+}
+

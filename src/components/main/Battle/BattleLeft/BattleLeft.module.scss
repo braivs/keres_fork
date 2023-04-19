@@ -1,0 +1,19 @@
+@import 'src/common/styles/variables';
+
+.component {
+    grid-area: LeftPart;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas:
+        "Header"
+        "Main";
+    grid-gap: $gap;
+    max-height: calc(100vh - #{$headerHeight + $gap} - #{$infoHeight + $gap} - 50px) ; //(50 is padding of App top & bot)
+    position: relative;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        grid-template-rows: auto auto;
+    }
+}

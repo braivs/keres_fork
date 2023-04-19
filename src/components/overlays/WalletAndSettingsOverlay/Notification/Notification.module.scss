@@ -1,0 +1,11 @@
+@import "../../../../common/styles/mixins";
+@import "../../../../common/styles/variables";
+
+.component {
+    width: 100%;
+    height: 18px;
+    margin-top: $gap;
+    font-size: 10px;
+    color: $secondTextColor;
+    @include flex($justifyContent: center, $alignItems: center);
+}

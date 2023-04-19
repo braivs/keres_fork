@@ -1,0 +1,10 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.component {
+    background-color: rgba(22, 22, 24, 0.5);
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+

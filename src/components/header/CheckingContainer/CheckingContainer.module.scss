@@ -1,0 +1,21 @@
+@import '/src/common/styles/variables';
+@import '/src/common/styles/mixins';
+
+.checkingContainer {
+    @include flex($justifyContent: center, $alignItems: stretch, $flexDirection: column);
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    cursor: auto;
+
+    .text {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .checkingContainer {
+        height: 105px;
+    }
+}

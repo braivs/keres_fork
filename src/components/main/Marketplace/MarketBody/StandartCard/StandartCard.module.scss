@@ -1,0 +1,99 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+.component {
+    @include flex($flexDirection: column, $justifyContent: space-between, $alignItems: center);
+    padding-bottom: 11px;
+    min-height: 350px;
+
+    .price {
+        background-color: $chartColor;
+        height: 40px;
+        @include flex($justifyContent: space-between, $alignItems: center);
+        padding-left: 10px;
+        width: 100%;
+
+        div {
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+        }
+
+        .nftTierImg {
+            cursor: pointer;
+        }
+    }
+
+    .imgContainer {
+        height: 222px;
+        margin-top: 10px;
+        @include flex($alignItems: center);
+
+        .mainImgAgent {
+            max-height: 194px;
+        }
+
+        .mainImgWeapon {
+            max-width: 190px;
+            max-height: 81px;
+        }
+
+        .mainImgLand {
+            max-width: 160px;
+            max-height: 160px;
+        }
+    }
+
+
+    .header {
+        font-size: 16px;
+        width: 100%;
+        @include flex($justifyContent: center)
+    }
+
+    .secondHeader {
+        font-size: 11px;
+        padding: 10px;
+        @include flex($justifyContent: center);
+        color: $secondTextColor;
+    }
+
+    .buttonContainer {
+        padding: 0 5px;
+        width: 100%;
+
+        .button {
+            width: 100%;
+            height: 30px;
+            background-color: $mainColor;
+
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1200px) { // 600px - 1200px
+    .component {
+        .header {
+            text-align: center;
+        }
+
+        .imgContainer {
+            padding: 10px;
+
+            .mainImgAgent {
+                width: 100%;
+            }
+
+            .mainImgWeapon {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        min-height: unset;
+    }
+}*/

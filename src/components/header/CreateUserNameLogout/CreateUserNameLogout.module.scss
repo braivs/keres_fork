@@ -1,0 +1,10 @@
+@import 'src/common/styles/mixins';
+
+.component {
+    @include flex($justifyContent: space-around, $alignItems: center, $flexDirection: column);
+    padding: 5px;
+
+    div {
+        width: 100%;
+    }
+}

@@ -1,0 +1,74 @@
+@import 'src/common/styles/variables';
+@import 'src/common/styles/mixins';
+
+$tableGap: 2px;
+
+.overlayContainer {
+    width: 377px;
+    padding: 67px 36px 28px;
+    position: relative;
+
+    .wextrizig {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 46.84px;
+    }
+
+    .closeImg {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        cursor: pointer;
+    }
+
+    .tableHeader, .tableRow {
+        display: grid;
+        grid-gap: $tableGap;
+        grid-template-columns: 1fr 1.07fr;
+
+        .tableCell {
+            @include flex(center, center);
+            text-align: center;
+        }
+
+        .others {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1.13fr;
+            grid-gap: $tableGap;
+        }
+    }
+
+    .tableHeader {
+        div {
+            height: 30px;
+        }
+
+        .first {
+            font-size: 12px;
+        }
+
+        .smallFont {
+            font-size: 7px;
+        }
+
+
+    }
+}
+
+.tableRow {
+    margin-top: $tableGap;
+    font-size: 10px;
+
+    .nftTiers, .others {
+        display: grid;
+        grid-gap: $tableGap;
+    }
+
+    .nftTiers {
+        grid-template-columns: 1fr 2.5fr 4fr;
+    }
+}
+

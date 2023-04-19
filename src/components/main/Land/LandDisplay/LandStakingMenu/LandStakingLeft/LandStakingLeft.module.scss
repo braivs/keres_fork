@@ -1,0 +1,35 @@
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: UpgLeft;
+
+    .header {
+        font-size: 14px;
+        @include flex($justifyContent: center, $alignItems: center);
+    }
+
+    .containerLevel1, .containerLevel2 {
+        display: grid;
+        grid-gap: $gap;
+    }
+
+    .containerLevel1 {
+        grid-template-rows: 32px repeat(4, 20px);
+    }
+
+    .containerLevel2 {
+        margin-top: $gap;
+        grid-template-rows: 32px repeat(6, 20px);
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        .containerLevel1 {
+            grid-template-rows: 32px repeat(4, 45px);
+        }
+        .containerLevel2 {
+            grid-template-rows: 32px 45px 20px repeat(4, 45px);
+        }
+    }
+}

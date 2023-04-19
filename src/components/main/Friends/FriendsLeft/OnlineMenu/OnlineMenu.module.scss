@@ -1,0 +1,45 @@
+@import '/src/common/styles/mixins';
+@import '/src/common/styles/variables';
+
+.component {
+    grid-area: OnlineMenu;
+    height: 100%;
+    @include flex($justifyContent: space-between, $alignItems: center);
+    padding: 0 20px;
+    direction: ltr;
+    margin-left: 15px;
+
+    .element {
+        cursor: pointer;
+        @include flex();
+
+        .subElement {
+            color: $secondTextColor
+        }
+
+        .count {
+            margin-left: 5px;
+        }
+
+        .active {
+            color: $mainTextColor
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+        .element {
+            @include flex($flexDirection: column);
+
+            .subElement {
+                font-size: 12px;
+            }
+
+            .count {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+    }
+}

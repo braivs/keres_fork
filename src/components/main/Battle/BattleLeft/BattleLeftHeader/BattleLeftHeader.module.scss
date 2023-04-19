@@ -1,0 +1,13 @@
+@import 'src/common/styles/mixins';
+
+.component {
+    grid-area: Header;
+    @include flex($justifyContent: center, $alignItems: center);
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) { // 350px - 600px
+    .component {
+       padding: 20px 0;
+    }
+}
