@@ -4,6 +4,7 @@ import sC from 'src/common/styles/Common.module.scss'
 import classNames from 'classnames'
 import {CommonButton} from 'src/common/CommonButton/CommonButton'
 import uploadImg from 'src/assets/image/uploadImg.svg'
+import uploadImgDis from 'src/assets/image/uploadImgDis.png'
 import {useAppDispatch, useAppSelector} from 'src/hooks/hooks'
 import {BriLinearProgress} from 'src/common/BriLinearProgress/BriLinearProgress'
 import {messagesThunks, setTextAreaValue} from "src/redux/messagesSlice"
@@ -80,7 +81,7 @@ export const NewMessage = (props: PropsType) => {
                           onClick={onUploadImg}
                           tooltipText={'Send picture'}
             >
-                <img src={uploadImg} alt="photoGallery"/>
+                <img className={s.buttonDisabledFill} src={isButtonsDisabled ? uploadImgDis : uploadImg} alt="photoGallery"/>
             </CommonButton>
             {messagesMode === 'text'
                 ? <textarea className={classNames(sC.baseBgColor, s.textArea)}
