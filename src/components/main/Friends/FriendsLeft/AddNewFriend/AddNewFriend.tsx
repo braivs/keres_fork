@@ -2,6 +2,7 @@ import React from 'react'
 import s from './AddNewFriend.module.scss'
 import classNames from 'classnames'
 import add from 'src/assets/image/tabfriends/add.svg'
+import addDis from 'src/assets/image/tabfriends/addDis.png'
 import {CommonButton} from 'src/common/CommonButton/CommonButton'
 import {useDispatch} from 'react-redux'
 import {setOverlayAddFriendShow} from 'src/redux/overlaySlice'
@@ -23,7 +24,7 @@ export const AddNewFriend = (props: PropsType) => {
             tooltipText={"Add new friends"}
             isDisabled={addFriendButtonDisabled}
         >
-            <img src={add} alt="add"/>
+            <img src={!addFriendButtonDisabled ? add : addDis} alt="add"/>
         </CommonButton>
     </div>
 }
