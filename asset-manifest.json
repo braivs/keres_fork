@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/keres_fork/static/css/main.f4e0c3db.css",
-    "main.js": "/keres_fork/static/js/main.3fd75359.js",
+    "main.css": "/keres_fork/static/css/main.04cb36dc.css",
+    "main.js": "/keres_fork/static/js/main.584cc2bf.js",
     "static/js/787.cd12b198.chunk.js": "/keres_fork/static/js/787.cd12b198.chunk.js",
     "static/media/background.png": "/keres_fork/static/media/background.97dcae6fd63403751d11.png",
     "static/media/yaldavazin.png": "/keres_fork/static/media/yaldavazin.9d1da388e380f8f9cc58.png",
@@ -51,12 +51,12 @@
     "static/media/add.svg": "/keres_fork/static/media/add.be3ea2a9ce26e086d96bec79bedf29ee.svg",
     "static/media/offline.svg": "/keres_fork/static/media/offline.233d14e5fd848ddbd368280dc4d2b145.svg",
     "static/media/online.svg": "/keres_fork/static/media/online.6f9417ec2dba27f71c107ced46d51881.svg",
-    "main.f4e0c3db.css.map": "/keres_fork/static/css/main.f4e0c3db.css.map",
-    "main.3fd75359.js.map": "/keres_fork/static/js/main.3fd75359.js.map",
+    "main.04cb36dc.css.map": "/keres_fork/static/css/main.04cb36dc.css.map",
+    "main.584cc2bf.js.map": "/keres_fork/static/js/main.584cc2bf.js.map",
     "787.cd12b198.chunk.js.map": "/keres_fork/static/js/787.cd12b198.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4e0c3db.css",
-    "static/js/main.3fd75359.js"
+    "static/css/main.04cb36dc.css",
+    "static/js/main.584cc2bf.js"
   ]
 }
